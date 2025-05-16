@@ -1,9 +1,9 @@
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let mut vec = vec;
+    let mut  vec1 = vec;
 
-    vec.push(88);
+    vec1.push(88);
 
-    vec
+    vec1
 }
 
 fn main() {
@@ -19,8 +19,7 @@ mod tests {
     #[test]
     fn move_semantics2() {
         let vec0 = vec![22, 44, 66];
-
-        let vec1 = fill_vec(vec0);
+        let vec1 = fill_vec(vec0.clone());
 
         assert_eq!(vec0, [22, 44, 66]);
         assert_eq!(vec1, [22, 44, 66, 88]);
